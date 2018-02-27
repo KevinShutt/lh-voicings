@@ -24,11 +24,11 @@
 
     <div id="spacer"></div>
 
-    <ul>
+    <ol>
         <li th:each="int : ${array}">
             <div th:replace="fragments :: chord-select"></div>
         </li>
-    </ul>
+    </ol>
 
     <script type="text/javascript" th:src="@{/js/app.js}"></script>
 
