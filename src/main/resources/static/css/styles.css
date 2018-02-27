@@ -1,0 +1,125 @@
+body {
+	color: yellow;
+	background-color: black;
+}
+
+#nav-bar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 10px;
+    width: 100%;
+    background-color: white;
+    color: black;
+    z-index: 10;
+}
+
+#spacer {
+    height: 100px;
+}
+
+#edit #save{
+    width: 144px;
+    height: 36px;
+}
+
+#player-piano span div .chord-symbol {
+	display: inline-block;
+	width: 460px;
+	text-align: center;
+	vertical-align: text-center;
+	font-size: 72px;
+	font-family: sans-serif;
+	color: white;
+}
+
+span div .chord-symbol {
+	display: inline-block;
+	width: 425px;
+	text-align: center;
+	vertical-align: text-center;
+	font-size: 72px;
+	font-family: sans-serif;
+	color: white;
+}
+
+form {
+	margin : 20px;
+}
+
+button a{
+    color: black;
+}
+
+.submit {
+    margin: 10px;
+}
+
+select {
+	margin : 0px 10px 0px 0px;
+}
+
+.lyrics-input {
+    width: 640px;
+}
+.keyboard div {
+	display: inline-block;
+	color: black;
+	font-size: 12px;
+	vertical-align: text-bottom;
+	font-family: monospace;
+}
+
+.white {
+	background-color: white;
+	margin: 0px 0px 0px -18px;
+	width: 48px;
+	height: 144px;
+	border: 1px solid black;
+	position: relative;
+	z-index: 1;
+	text-align: center;
+}
+
+.keyboard .c, .keyboard .f{
+	margin: 0px 0px 0px -4px;
+}
+
+.black {
+	background-color: black;
+	margin: 0px 0px 48px -16px;
+	width: 24px;
+	height: 96px;
+	border: 1px solid black;
+	position: relative;
+	z-index: 2;
+	text-align: center;
+}
+
+.white.highlight {
+	background-color: #FFFF00;
+}
+
+.black.highlight {
+	background-color: #FF0000;
+}
+
+
+#title h1 {
+	text-align: center;
+	font-size: 72px;
+}
+
+
+.lyrics {
+	font-size: 36px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+a {
+	color: yellow;
+	text-align: center;
+	font-size: 24px;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+
+    <nav th:replace="fragments :: navigation"></nav>
+
+    <h1></h1>
+
+    <p id="json" th:text="${json}" style="color:black"></p>
+
+    <input type="button" id="edit" value="EDIT"></input>
+
+
+    <div id="nav-bar">
+
+        <span>
+
+            <form th:object="${song}" id="save-song" method="POST">
+
+                <label for="title"> Song Title
+
+                    <input type="text" id="title" name="title" required="required" />
+
+                <input type="submit" value="SAVE"/>
+            </label>
+
+        </form>
+
+        </span>
+
+    </div>
+
+    <div id="spacer"></div>
+
+
+    <div>
+        <form id="player-piano">
+
+            <div class="lyrics">Loading...</div>
+            <span>
+                <div class="keyboard">
+
+					<div class="chord-symbol"></div>
+
+                    <div class="48 white c"></div>
+                    <div class = "49 black"></div>
+                    <div class="50 white d"></div>
+                    <div class = "51 black"></div>
+                    <div class="52 white e"></div>
+                    <div class="53 white f"></div>
+                    <div class = "54 black"></div>
+                    <div class="55 white g"></div>
+                    <div class = "56 black"></div>
+                    <div class="57 white a"></div>
+                    <div class = "58 black"></div>
+                    <div class="59 white b"></div>
+                    <div class="60 white c"></div>
+                    <div class = "61 black"></div>
+                    <div class="62 white d"></div>
+                    <div class = "63 black"></div>
+                    <div class="64 white e"></div>
+                    <div class="65 white f"></div>
+                    <div class = "66 black"></div>
+                    <div class="67 white g"></div>
+                    <div class = "68 black"></div>
+                    <div class="69 white a"></div>
+                    <div class = "70 black"></div>
+                    <div class="71 white b"></div>
+                    <div class="72 white c"></div>
+			    </div>
+			</span>
+        </form>
+    </div>
+
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+
+    <ul>
+        <li th:each="int : ${array}">
+            <div th:replace="fragments :: chord-select"></div>
+        </li>
+    </ul>
+
+    <script type="text/javascript" th:src="@{/js/song.js}"></script>
+
+</body>
+</html>

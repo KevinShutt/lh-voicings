@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+
+    <nav th:replace="fragments :: navigation"></nav>
+
+    <h1 th:text="${title}">Default Title</h1>
+
+    <p th:unless="${songs} and ${songs.size()}">No songs yet :(</p>
+
+    <ul>
+        <li th:each="song : ${songs}">
+            <a th:href="'/lhv/song/' + ${song.id}" th:text="${song.title}"></a>
+        </li>
+    </ul>
+
+    <p>
+        <button>
+            <a href="/lhv/delete">Delete Song</a>
+        </button>
+    </p>
+
+</body>
+</html>

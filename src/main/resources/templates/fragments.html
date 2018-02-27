@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:fragment="head">
+    <meta charset="UTF-8"/>
+    <title th:text="${title}">Left Hand Voicings</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}"/>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+    <nav th:fragment="navigation">
+        <a href="/lhv">Menu</a>
+        <a href="/lhv/new-song">New Song</a>
+    </nav>
+
+    <div th:fragment="chord-select">
+        <form th:object="${int}" th:id="${int}" class="chord-selection">
+			<span class="input">
+				<label for="root">Root:</label>
+				<select id="root" name="root" class="root-select">
+					<option value="C">C</option>
+					<option value="C#">C&#x266f;</option>
+					<option value="Db">D&#x266d; </option>
+					<option value="D">D</option>
+					<option value="D#">D&#x266f;</option>
+					<option value="Eb">E&#x266d; </option>
+					<option value="E">E</option>
+					<option value="F">F</option>
+					<option value="F#">F&#x266f;</option>
+					<option value="Gb">G&#x266d; </option>
+					<option value="G">G</option>
+					<option value="G#">G&#x266f;</option>
+					<option value="Ab">A&#x266d; </option>
+					<option value="A">A</option>
+					<option value="A#">A&#x266f;</option>
+					<option value="Bb">B&#x266d; </option>
+					<option value="B">B</option>
+				</select>
+				<label for="quality"> Chord Quality:</label>
+				<select id="quality" name="quality" class="quality-select">
+					<option value="maj7">maj7</option>
+					<option value="6/9">6/9</option>
+					<option value="maj7#11">maj7#11</option>
+                    <!--<option value="maj7#5">maj7#5</option>
+                    <option value="maj7sus4">maj7sus4</option> -->
+					<option value="min7">min7</option>
+					<option value="min6">min6</option>
+					<option value="min/maj7">min/maj7</option>
+                    <!--<option value="minb6">minb6</option>
+                    <option value="sus4b9">sus4b9</option>-->
+					<option value="7">7</option>
+					<option value="7alt">7alt</option>
+					<option value="7sus4">7sus4</option>
+					<option value="7#11">7#11</option>
+					<option value="7b9#11">7b9#11</option>
+                    <!--<option value="7sus4b9">7sus4b9</option>
+                    <option value="7b13">7b13</option>-->
+					<option value="min7b5">min7b5</option>
+					<option value="dim7">dim7</option>
+				</select>
+				<label for="form">Form:</label>
+				<select id="form" name="form" class="form-select">
+					<option value="A">A</option>
+					<option value="B">B</option>
+				</select>
+				<label for="lyrics">Lyrics:</label>
+				<input type="text" id="lyrics" name="lyrics" class="lyrics-input" />
+				<input type="submit" value="Show Chord" class="submit" />
+			</span>
+			<div class="lyrics"></div>
+            <span>
+                <div class="keyboard">
+
+					<div class="chord-symbol"></div>
+
+                    <div class="48 white c"></div>
+                    <div class = "49 black"></div>
+                    <div class="50 white d"></div>
+                    <div class = "51 black"></div>
+                    <div class="52 white e"></div>
+                    <div class="53 white f"></div>
+                    <div class = "54 black"></div>
+                    <div class="55 white g"></div>
+                    <div class = "56 black"></div>
+                    <div class="57 white a"></div>
+                    <div class = "58 black"></div>
+                    <div class="59 white b"></div>
+                    <div class="60 white c"></div>
+                    <div class = "61 black"></div>
+                    <div class="62 white d"></div>
+                    <div class = "63 black"></div>
+                    <div class="64 white e"></div>
+                    <div class="65 white f"></div>
+                    <div class = "66 black"></div>
+                    <div class="67 white g"></div>
+                    <div class = "68 black"></div>
+                    <div class="69 white a"></div>
+                    <div class = "70 black"></div>
+                    <div class="71 white b"></div>
+                    <div class="72 white c"></div>
+			    </div>
+			</span>
+        </form>
+        <hr />
+    </div>
+
+    <script type="text/javascript" th:src="@{/js/app.js}"></script>
+
+</body>
+</html>
